@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17", "-Wall", "-g",
+                "main.cpp", "Estudiante.cpp", "Curso.cpp",
+                "GestorCalificaciones.cpp", "Menu.cpp",
+                "-o", "GestorEstudiantes"
+            ],
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Compilar y ejecutar",
+            "type": "shell",
+            "command": "g++ -std=c++17 -Wall -g main.cpp Estudiante.cpp Curso.cpp GestorCalificaciones.cpp Menu.cpp -o GestorEstudiantes && ./GestorEstudiantes",
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
